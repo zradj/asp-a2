@@ -1,8 +1,8 @@
 # Task 1 - Big vs. Little Endianness
 
-When we work with numbers (specifically, integers) in high-level languages, we rarely think about how these numbers are stored in memory or transmitted via networks. We just see the number and take that it works for granted. However, at a low, hardware level, things become complicated.
+When we work with numbers (specifically, integers) in high-level languages, we rarely think about how these numbers are stored in memory or transmitted via networks. We just see the number and take it for granted. However, at a low, hardware level, things become complicated.
 
-If you worked in languages like Java or Rust, you know that there are 16-bit, 32-bit, 64-bit, and a few other types of integers. These numbers indicates how much memory it takes to represent each of these types of integers (and, consequently, how big of a number range a type supports). However, on the hardware level, all data is split into 8-bit (or 1 byte) chunks, including integers. This is where we face a choice on how to represent our numbers.
+If you worked in languages like Java or Rust, you know that there are 16-bit, 32-bit, 64-bit, and a few other types of integers. These numbers indicate how much memory it takes to represent each of these types of integers (and, consequently, how big of a number range a type supports). However, on the hardware level, all data is split into 8-bit (or 1 byte) chunks, including integers. This is where we face a choice on how to represent our numbers.
 
 Let's say we have a 32-bit (4-byte) integer 1337133713. In binary notation, it looks like this:
 
@@ -27,7 +27,7 @@ Byte:       4F   B3   0A   91
 Mem. addr:  0    1    2    3
 ```
 
-Here, the MSB is stored first and the LSB is stored last.
+Here, the MSB is stored at the lowest memory address and the LSB is stored at the highest.
 
 The other option is called **Little Endian**:
 
@@ -37,7 +37,7 @@ Byte:       91   0A   B3   4F
 Mem. addr:  0    1    2    3
 ```
 
-Little Endian is the opposite of Big Endian: the LSB is stored first and the MSB is stored last.
+Little Endian is the opposite of Big Endian: the LSB is stored at the lowest memory address and the MSB is stored at the highest.
 
 ---
 
