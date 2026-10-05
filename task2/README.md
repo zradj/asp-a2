@@ -75,7 +75,7 @@ import random
 
 for i in random.sample(range(101), 10):
     lst = list(range(i))
-    print(f"lst ({i}):", lst.__sizeof__(), "; alloc for:", (lst.__sizeof__() - 40) / 8)
+    print(f"lst ({i}): {lst.__sizeof__()} ; alloc for: {(lst.__sizeof__() - 40) / 8}")
 ```
 
 Output:
@@ -126,7 +126,7 @@ import random
 
 for i in random.sample(range(101), 10):
     tpl = tuple(range(i))
-    print(f"tpl ({i}):", tpl.__sizeof__(), "; alloc for:", (tpl.__sizeof__() - 32) / 8)
+    print(f"tpl ({i}): {tpl.__sizeof__()} ; alloc for: {(tpl.__sizeof__() - 32) / 8}")
 ```
 
 Outputs:
