@@ -1,5 +1,7 @@
 # Task 1 - Big vs. Little Endianness
 
+## Overview of Endianness
+
 When we work with numbers (specifically, integers) in high-level languages, we rarely think about how these numbers are stored in memory or transmitted via networks. We just see the number and take it for granted. However, at a low, hardware level, things become complicated.
 
 If you worked in languages like Java or Rust, you know that there are 16-bit, 32-bit, 64-bit, and a few other types of integers. These numbers indicate how much memory it takes to represent each of these types of integers (and, consequently, how big of a number range a type supports). However, on the hardware level, all data is split into 8-bit (or 1 byte) chunks, including integers. This is where we face a choice on how to represent our numbers.
@@ -39,7 +41,7 @@ Mem. addr:  0    1    2    3
 
 Little Endian is the opposite of Big Endian: the LSB is stored at the lowest memory address and the MSB is stored at the highest.
 
----
+## Usage and Endianness Bug Example
 
 All in all, the initial choice on which endianness should be implemented is mostly arbitrary. If you somehow manage to create your own RAM or processor tomorrow, you may choose either one of them. Little Endian allows zero-cost type casting (for example, converting a 32-bit integer to an 8-bit one is trivial because the necessary bytes are already at the lowest address), while Big Endian is more intuitive and makes comparisons and sign testing easier (the sign bit and the most significant parts of the number are at the lowest address). Little Endian is commonly used in CPUs, Operating Systems, and microcontrollers. Big Endian, on the other hand, is commonly used in network protocols, file formats like JPEG or PNG, and legacy systems.
 
