@@ -55,3 +55,15 @@ The C++ and Python codes multiply two 8x8 matrices (same in both codes). The exe
 Python ran in an average of `0.000026` seconds over five runs (or 26 microseconds). C++ ran in an average of 46 microseconds over five runs.
 
 I am not surprised by these results, because NumPy uses C under the hood and that C code has been extremely optimized by dozens of experts over many years. It is not surprising that my C++ code I wrote in a day cannot outperform NumPy.
+
+# ChatGPT Solution
+
+The ChatGPT solution can be found in `chatgpt/`.
+
+ChatGPT utilized a more sophisticated approach in C++ by using the `i-k-j` ordering. It said that the "naive" `i-j-k` ordering is less efficient because it is not cache-friendly. It also created a separate class called `Matrix` where it overloaded some operators for accessing the matrix and added some utility methods inside.
+
+In Python, it did the same thing as me: it just used NumPy's `@` operator.
+
+Full details are described in `chatgpt/README.md`.
+
+As for the prompt, I didn't change much - I sent the task word-for-word and just added the instructions on how to structure the project. I told it to put all of the code to `code/` and the analysis to `README.md`.
