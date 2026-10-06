@@ -39,7 +39,7 @@ def main():
     res = img[row_start:row_end, col_start:col_end]
     
     with open("output_py.txt", 'w') as f:
-        f.write('\n'.join([' '.join(col.astype(str).tolist()) for col in res]))
+        f.write('\n'.join([' '.join(col.astype(str)) for col in res]))
 
 if __name__ == "__main__":
     main()
