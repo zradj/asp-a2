@@ -38,14 +38,20 @@ int main() {
 
   std::cout << "Please enter the dimensions of the first matrix (rows, "
                "columns). Example: 2 3\n";
-  std::cin >> m1 >> n1;
+  if (!(std::cin >> m1 >> n1)) {
+    std::cout << "Invalid input.\n";
+    return 1;
+  };
   if (m1 < 0 || n1 < 0) {
     std::cout << "The dimensions must be non-negative.\n";
     return 1;
   }
   std::cout << "Please enter the dimensions of the second matrix (rows, "
                "columns). Example: 3 2\n";
-  std::cin >> m2 >> n2;
+  if (!(std::cin >> m2 >> n2)) {
+    std::cout << "Invalid input.\n";
+    return 1;
+  };
   if (m2 < 0 || n2 < 0) {
     std::cout << "The dimensions must be non-negative.\n";
     return 1;
