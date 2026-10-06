@@ -1,0 +1,49 @@
+# Task 4 - Matrix Slicing
+
+The slicing code was implemented in C++ and in Python using NumPy. To run the Python code, run `python3` directly on `slicing.py`. Make sure you have `numpy` installed.
+
+For the C++ code, you can run the following if you have `make` installed:
+
+```
+make slicing
+```
+
+The C++ and Python scripts read the matrix from `input.txt` and slice this matrix according to the parameters specified by you in the console when you run them. You can modify `input.txt` if you want, but make sure you use only integers 1-4 inside the matrix (these represent the colors in the visualization). The scripts then output the results to `output_cpp.txt` and `output_py.txt` for C++ and Python, respectively.
+
+There is also the `visualize.py` script that draws a nice image that shows the matrix as a gridded image. The scripts saves the resulting image to `output.png`. Before running, make sure you have matplotlib installed. This script was written with AI help (see below).
+
+## Visualization
+
+Parameters have the format: `row_start row_end col_start col_end`.
+
+### Full image
+
+Parameters: `0 16 0 16`
+
+Output:
+
+![Full image](images/full-image.png)
+
+### Fourth quarter
+
+Parameters: `8 16 8 16`
+
+Output:
+
+![Fourth quarter](images/fourth-quarter.png)
+
+### Middle
+
+Parameters: `4 12 4 12`
+
+![Middle](images/middle.png)
+
+### Random parameters
+
+Parameters: `1 11 5 15`
+
+![Random parameters](images/random-parameters.png)
+
+## AI Usage
+
+I wrote the matplotlib code in `visualize.py` with help from AI. I think this code is just a nicety and was not very important to the task. Also, writing beautiful matplotlib code manually requires a lot of practice. Unfortunately, I don't have that.
