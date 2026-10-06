@@ -24,13 +24,13 @@ Output:
 
 ![Full image](images/full-image.png)
 
-### Fourth quarter
+### Third quarter
 
 Parameters: `8 16 8 16`
 
 Output:
 
-![Fourth quarter](images/fourth-quarter.png)
+![Third quarter](images/third-quarter.png)
 
 ### Middle
 
